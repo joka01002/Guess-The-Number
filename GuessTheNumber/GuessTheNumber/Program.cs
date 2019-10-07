@@ -41,12 +41,21 @@ namespace GuessTheNumber
                 }
                 Console.WriteLine("Want to play again? yes or no");
                 string ask = Console.ReadLine();
-                if (ask == "no")
+                if (ask == "no" || ask == "No")
                 {
                     again = false;
                 }
-                else if (ask == "yes")
+                else if (ask == "yes" || ask == "Yes")
                 {
+                    guess = 0;
+                    num = 0;
+                    Console.WriteLine("Ok, then guess a number, I thought of another");
+                }
+                else
+                {
+                    Console.WriteLine("You didn't write yes or no");
+                    Console.WriteLine("Therefore, I chose that you will play again");
+                    Console.WriteLine("Now guess a number");
                     guess = 0;
                     num = 0;
                 }
